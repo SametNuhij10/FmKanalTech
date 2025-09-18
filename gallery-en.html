@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - FmKanalTech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+         <div class="logo">
+    <img src="images/logo.png" alt="FmKanalTech">
+        <h2>FmKanalTech</h2>
+
+</div>
+            <ul class="nav-menu">
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="about-en.html">About</a></li>
+                <li><a href="services-en.html">Services</a></li>
+                <li><a href="gallery-en.html" class="active">Gallery</a></li>
+                <li><a href="contact-en.html">Contact</a></li>
+                <li class="language-switcher">
+                    <a href="gallery.html">AL</a>
+                    <a href="gallery-en.html">EN</a>
+                    <a href="gallery-mk.html">MK</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>See our professional work and equipment we use</p>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="photos-gallery">
+        <div class="container">
+            <h2>Photos from Our Work</h2>
+            <p class="section-description">Views from our projects and equipment used for canal cleaning</p>
+            
+            <div class="photos-grid">
+                <div class="photo-item">
+                    <img src="photos/photo1.jpg" alt="FmKanalTech - Photo 1" onclick="openModal(this)">
+                </div>
+                <div class="photo-item">
+                    <img src="photos/photo2.jpg" alt="FmKanalTech - Photo 2" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="videos-gallery">
+        <div class="container">
+            <h2>Videos from Our Work</h2>
+            <p class="section-description">Watch our high-pressure cleaning techniques in action</p>
+            
+            <div class="videos-grid">
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/video1.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/video2.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/video3.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="gallery-cta">
+        <div class="container">
+            <h2>Impressed by Our Work?</h2>
+            <p>Contact us to get professional services for your project</p>
+            <div class="cta-buttons">
+                <a href="contact-en.html" class="btn-primary">Contact Now</a>
+                <a href="services-en.html" class="btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FmKanalTech</h3>
+                    <p>Professional canal cleaning and maintenance services.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-en.html">About</a></li>
+                        <li><a href="services-en.html">Services</a></li>
+                        <li><a href="gallery-en.html">Gallery</a></li>
+                        <li><a href="contact-en.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Phone: +389 70 961 333</p>
+                    <p>Email: info@fmkanaltech.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FmKanalTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Photo Modal -->
+    <div id="photoModal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Modal Script -->
+    <script>
+        function openModal(img) {
+            document.getElementById("photoModal").style.display = "block";
+            document.getElementById("modalImage").src = img.src;
+            document.getElementById("modalImage").alt = img.alt;
+        }
+
+        function closeModal() {
+            document.getElementById("photoModal").style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById("photoModal").addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

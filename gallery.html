@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - FmKanalTech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+    <img src="images/logo.png" alt="FmKanalTech">   
+     <h2>FmKanalTech</h2>
+
+</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Ballina</a></li>
+                <li><a href="about.html">Rreth Nesh</a></li>
+                <li><a href="services.html">Shërbimet</a></li>
+                <li><a href="gallery.html" class="active">Galeria</a></li>
+                <li><a href="contact.html">Kontaktet</a></li>
+                <li class="language-switcher">
+                    <a href="gallery.html">AL</a>
+                    <a href="gallery-en.html">EN</a>
+                    <a href="gallery-mk.html">MK</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Galeria Jonë</h1>
+            <p>Shikoni punën tonë profesionale dhe pajisjet që përdorim</p>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="photos-gallery">
+        <div class="container">
+            <h2>Foto nga Puna Jonë</h2>
+            <p class="section-description">Pamje nga projektet dhe pajisjet që përdorim për pastrimin e kanaleve</p>
+            
+            <div class="photos-grid">
+                <div class="photo-item">
+                    <img src="photos/photo1.jpg" alt="FmKanalTech - Foto 1" onclick="openModal(this)">
+                </div>
+                <div class="photo-item">
+                    <img src="photos/photo2.jpg" alt="FmKanalTech - Foto 2" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="videos-gallery">
+        <div class="container">
+            <h2>Video nga Puna Jonë</h2>
+            <p class="section-description">Shikoni teknikat tona të pastrimit me presion të lartë në aksion</p>
+            
+            <div class="videos-grid">
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/video1.mp4" type="video/mp4">
+                        Shfletuesi juaj nuk mbështet video HTML5.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/video2.mp4" type="video/mp4">
+                        Shfletuesi juaj nuk mbështet video HTML5.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/video3.mp4" type="video/mp4">
+                        Shfletuesi juaj nuk mbështet video HTML5.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="gallery-cta">
+        <div class="container">
+            <h2>Të Impresionuar nga Puna Jonë?</h2>
+            <p>Kontaktoni me ne për të marrë shërbime profesionale për projektin tuaj</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn-primary">Kontaktoni Tani</a>
+                <a href="services.html" class="btn-secondary">Shërbimet Tona</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FmKanalTech</h3>
+                    <p>Shërbime profesionale për pastrimin dhe mirëmbajtjen e kanaleve.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Lidhje të Shpejta</h3>
+                    <ul>
+                        <li><a href="about.html">Rreth Nesh</a></li>
+                        <li><a href="services.html">Shërbimet</a></li>
+                        <li><a href="gallery.html">Galeria</a></li>
+                        <li><a href="contact.html">Kontakti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Informacione Kontakti</h3>
+                    <p>Telefon: +389 70 961 333</p>
+                    <p>Email: info@fmkanaltech.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FmKanalTech. Të gjitha të drejtat e rezervuara.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Photo Modal -->
+    <div id="photoModal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Modal Script -->
+    <script>
+        function openModal(img) {
+            document.getElementById("photoModal").style.display = "block";
+            document.getElementById("modalImage").src = img.src;
+            document.getElementById("modalImage").alt = img.alt;
+        }
+
+        function closeModal() {
+            document.getElementById("photoModal").style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById("photoModal").addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

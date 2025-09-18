@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерија - FmKanalTech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+    <img src="images/logo.png" alt="FmKanalTech">
+        <h2>FmKanalTech</h2>
+</div>
+            <ul class="nav-menu">
+                <li><a href="index-mk.html">Почетна</a></li>
+                <li><a href="about-mk.html">За Нас</a></li>
+                <li><a href="services-mk.html">Услуги</a></li>
+                <li><a href="gallery-mk.html" class="active">Галерија</a></li>
+                <li><a href="contact-mk.html">Контакти</a></li>
+                <li class="language-switcher">
+                    <a href="gallery.html">AL</a>
+                    <a href="gallery-en.html">EN</a>
+                    <a href="gallery-mk.html">MK</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Наша Галерија</h1>
+            <p>Видете ја нашата професионална работа и опремата што ја користиме</p>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="photos-gallery">
+        <div class="container">
+            <h2>Фотографии од Нашата Работа</h2>
+            <p class="section-description">Погледи од нашите проекти и опремата што ја користиме за чистење канали</p>
+            
+            <div class="photos-grid">
+                <div class="photo-item">
+                    <img src="photos/photo1.jpg" alt="FmKanalTech - Фотографија 1" onclick="openModal(this)">
+                </div>
+                <div class="photo-item">
+                    <img src="photos/photo2.jpg" alt="FmKanalTech - Фотографија 2" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="videos-gallery">
+        <div class="container">
+            <h2>Видеа од Нашата Работа</h2>
+            <p class="section-description">Видете ги нашите техники на чистење со висок притисок во акција</p>
+            
+            <div class="videos-grid">
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/video1.mp4" type="video/mp4">
+                        Вашиот прелистувач не поддржува HTML5 видео.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/video2.mp4" type="video/mp4">
+                        Вашиот прелистувач не поддржува HTML5 видео.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/video3.mp4" type="video/mp4">
+                        Вашиот прелистувач не поддржува HTML5 видео.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="gallery-cta">
+        <div class="container">
+            <h2>Импресионирани од Нашата Работа?</h2>
+            <p>Контактирајте не за да добиете професионални услуги за вашиот проект</p>
+            <div class="cta-buttons">
+                <a href="contact-mk.html" class="btn-primary">Контактирајте Сега</a>
+                <a href="services-mk.html" class="btn-secondary">Наши Услуги</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FmKanalTech</h3>
+                    <p>Професионални услуги за чистење и одржување канали.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Брзи Врски</h3>
+                    <ul>
+                        <li><a href="about-mk.html">За Нас</a></li>
+                        <li><a href="services-mk.html">Услуги</a></li>
+                        <li><a href="gallery-mk.html">Галерија</a></li>
+                        <li><a href="contact-mk.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакт Информации</h3>
+                    <p>Телефон: +389 70 961 333</p>
+                    <p>Email: info@fmkanaltech.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FmKanalTech. Сите права задржани.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Photo Modal -->
+    <div id="photoModal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Modal Script -->
+    <script>
+        function openModal(img) {
+            document.getElementById("photoModal").style.display = "block";
+            document.getElementById("modalImage").src = img.src;
+            document.getElementById("modalImage").alt = img.alt;
+        }
+
+        function closeModal() {
+            document.getElementById("photoModal").style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById("photoModal").addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
