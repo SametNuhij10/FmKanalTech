@@ -5,32 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - FmKanalTech</title>
     <link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
+<nav class="navbar">
+    <div class="nav-container">
         <div class="logo">
-    <img src="images/logo.png" alt="FmKanalTech">
-        <h2>FmKanalTech</h2>
-
-</div>
-            <ul class="nav-menu">
-                <li><a href="index-en.html">Home</a></li>
-                <li><a href="about-en.html">About</a></li>
-                <li><a href="services-en.html">Services</a></li>
-                <li><a href="gallery-en.html">Gallery</a></li>
-                <li><a href="contact-en.html" class="active">Contact</a></li>
-                <li class="language-switcher">
-                    <a href="contact.html">AL</a>
-                    <a href="contact-en.html">EN</a>
-                    <a href="contact-mk.html">MK</a>
-                </li>
-            </ul>
+            <img src="images/logo.png" alt="FmKanalTech">   
+            <h2>FmKanalTech</h2>
         </div>
-    </nav>
+        
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Ballina</a></li>
+            <li><a href="about.html" class="active">Rreth Nesh</a></li>
+            <li><a href="services.html">Shërbimet</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="contact.html">Kontaktet</a></li>
+            <li class="language-switcher">
+                <a href="about.html">AL</a>
+                <a href="about-en.html">EN</a>
+                <a href="about-mk.html">MK</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -59,7 +64,7 @@
                         <div class="contact-icon">✉️</div>
                         <div class="contact-text">
                             <h3>Email</h3>
-                            <p> fmkanaltech1@gmail.com</p>
+                            <p>fmkanaltech1@gmail.com</p>
                             <small>We respond within 24 hours</small>
                         </div>
                     </div>
@@ -86,7 +91,7 @@
             <p>Contact us today for free assessment and professional solutions</p>
             <div class="cta-buttons">
                 <a href="tel:+389 70 961 333" class="btn-primary">Call Now</a>
-                <a href="mailto: fmkanaltech1@gmail.com" class="btn-secondary">Send Email</a>
+                <a href="mailto:fmkanaltech1@gmail.com" class="btn-secondary">Send Email</a>
             </div>
         </div>
     </section>
@@ -111,7 +116,7 @@
                 <div class="footer-section">
                     <h3>Contact Info</h3>
                     <p>Phone: +389 70 961 333</p>
-                    <p>Email:  fmkanaltech1@gmail.com</p>
+                    <p>Email: fmkanaltech1@gmail.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -119,8 +124,16 @@
             </div>
         </div>
     </footer>
+        <script>
+function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
+</script>
 </body>
-
 </html>
 
 
